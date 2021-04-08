@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Game</string>
+    <string name="architecture">Architecture</string>
+    <string name="mvp">Mvp</string>
+    <string name="mvvm">Mvvm</string>
+    <string name="the_winner_is">The Winner is:</string>
+</resources>

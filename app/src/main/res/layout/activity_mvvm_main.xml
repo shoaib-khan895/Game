@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="gameViewModel"
+            type="com.example.game.mvvm.MvvmViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".mvvm.MvvmMainActivity"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="25dp">
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:padding="10dp"
+        android:background="@drawable/tictactoe"
+        android:layout_gravity="center_vertical">
+
+        <Button
+            android:tag="00"
+            android:layout_margin="5dp"
+            android:padding="20dp"
+            android:layout_marginStart="5dp"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,0)}"
+            android:id="@+id/btn_0"
+            android:textColor="@color/black"
+            android:background="@drawable/button"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["00"]}'
+
+            />
+
+        <Button
+            android:tag="01"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,1)}"
+            android:id="@+id/btn_1"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["01"]}'
+            />
+        <Button
+            android:tag="02"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,2)}"
+            android:id="@+id/btn_2"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["02"]}'
+            />
+        <Button
+            android:tag="10"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,0)}"
+            android:id="@+id/btn_3"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["10"]}'
+
+            />
+        <Button
+            android:tag="11"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,1)}"
+            android:id="@+id/btn_4"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["11"]}'
+            />
+        <Button
+            android:tag="12"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
+
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,2)}"
+            android:id="@+id/btn_5"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["12"]}'
+            />
+        <Button
+            android:tag="20"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,0)}"
+            android:id="@+id/btn_6"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["20"]}'
+            />
+        <Button
+            android:tag="21"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button"
+            android:id="@+id/btn_7"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,1)}"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["21"]}'
+
+            />
+        <Button
+            android:tag="22"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,2)}"
+            android:background="@drawable/button"
+            android:id="@+id/btn_8"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text='@{gameViewModel.cells["22"]}'
+            />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/winnerPlayerViewGroupmvvm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_winner_is"
+            android:textSize="30sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/winnerPlayerLabelmvvm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

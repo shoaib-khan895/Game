@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/architecture"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+         />
+    <Button
+        android:id="@+id/mvmActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mvp"
+        android:layout_margin="20dp"/>
+    <Button
+        android:id="@+id/mvvmActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mvvm"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>
